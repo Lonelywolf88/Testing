@@ -102,7 +102,7 @@
       }
       #popup {
         font-size: 6px; /* **EXTREMELY REDUCED FONT SIZE for popup on mobile** */
-        padding: 8px 5px; /* Reduced horizontal padding */
+        padding: 8px 5px; /* **Reduced horizontal padding** */
         line-height: 1.2;
         white-space: nowrap; /* Forces text onto a single line */
       }
@@ -154,7 +154,7 @@
 </head>
 <body>
 
-  <h1>Are you a gay?</h1>
+  <h1>Are you gay?</h1>
   <button id="yesBtn" class="button">是 👉👈</button>
   <button id="noBtn" class="button">不是 🚀</button>
   <div id="emojiRain"></div>
@@ -178,7 +178,7 @@
       const padding = 50; // Keep button at least 50px from any edge
 
       // Calculate the restricted movement range
-      const minX = window.innerWidth - noBtn.offsetWidth - padding;
+      const minX = padding;
       const maxX = window.innerWidth - noBtn.offsetWidth - padding;
       const minY = padding;
       const maxY = window.innerHeight - noBtn.offsetHeight - padding;
