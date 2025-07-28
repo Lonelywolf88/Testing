@@ -101,9 +101,10 @@
         top: 60%;
       }
       #popup {
-        font-size: 18px;
-        padding: 10px 15px;
+        font-size: 14px; /* **SIGNIFICANTLY MORE REDUCED FONT SIZE for popup on mobile** */
+        padding: 8px 10px; /* **Adjusted padding to allow for single line** */
         line-height: 1.2;
+        /* white-space: nowrap; /* <-- CONSIDER adding this if it still wraps, but might cause overflow */
       }
       .emoji {
         font-size: 40px;
@@ -147,7 +148,7 @@
       display: none;
       z-index: 1000;
       user-select: none;
-      writing-mode: horizontal-tb; /* **NEW: Ensures text flows horizontally** */
+      writing-mode: horizontal-tb; /* Ensures text flows horizontally */
     }
   </style>
 </head>
