@@ -101,11 +101,12 @@
         top: 60%;
       }
       #popup {
-        font-size: 6px; /* Extremely reduced font size for popup on mobile */
-        padding: 8px 5px; /* Reduced horizontal padding */
-        line-height: 1.2;
-        white-space: nowrap; /* Forces text onto a single line */
-        max-width: 90vw; /* **NEW: Constrain popup width to 90% of viewport width** */
+        font-size: 16px; /* **Increased font size for readability** */
+        padding: 10px 15px; /* **Adjusted padding for wrapping** */
+        line-height: 1.4; /* Adjusted line-height for better spacing */
+        white-space: normal; /* **NEW: Allows text to wrap** */
+        max-width: 90vw; /* Keep max-width to prevent overflow off-screen */
+        box-sizing: border-box; /* Ensures padding is included in width calculation */
       }
       .emoji {
         font-size: 40px;
