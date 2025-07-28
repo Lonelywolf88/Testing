@@ -13,96 +13,93 @@
       height: 100vh;
       position: relative;
       text-align: center;
+      font-size: 18px; /* Base font size increased for overall larger text */
     }
 
     h1 {
-      font-size: 36px;
+      font-size: 48px; /* Increased from 36px */
       color: #333;
-      margin-top: 80px;
+      margin-top: 100px; /* Adjusted margin-top */
       text-shadow: 2px 2px #fff;
     }
 
     .button {
-      font-size: 20px;
-      padding: 15px 30px;
-      margin: 20px;
+      font-size: 24px; /* Increased from 20px */
+      padding: 20px 40px; /* Increased padding */
+      margin: 30px; /* Increased margin */
       border: none;
       border-radius: 10px;
       position: absolute; /* Keep absolute for the random movement */
       transition: all 0.2s ease;
       cursor: pointer;
-      /* Ensure text is centered for the button itself */
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    /* --- EDITED PART FOR RESPONSIVE BUTTONS --- */
     #yesBtn {
-      left: 60%; /* Position from left */
-      top: 50%;  /* Position from top */
-      transform: translate(-50%, -50%); /* Center the button element itself */
+      left: 60%;
+      top: 50%;
+      transform: translate(-50%, -50%);
       background-color: #28a745;
       color: white;
     }
 
     #noBtn {
-      left: 40%; /* Position from left */
-      top: 50%;  /* Position from top */
-      transform: translate(-50%, -50%); /* Center the button element itself */
+      left: 40%;
+      top: 50%;
+      transform: translate(-50%, -50%);
       background-color: #dc3545;
       color: white;
     }
 
-    /* Media queries for responsiveness */
+    /* Media queries for responsiveness - values adjusted to scale up */
     @media (max-width: 768px) { /* For tablets and smaller */
       h1 {
-        font-size: 28px;
-        margin-top: 50px;
+        font-size: 38px; /* Increased for tablets */
+        margin-top: 70px;
       }
       .button {
-        font-size: 16px;
-        padding: 10px 20px;
-        margin: 15px; /* Adjust margin */
+        font-size: 20px; /* Increased for tablets */
+        padding: 15px 30px;
+        margin: 20px;
       }
       #yesBtn {
-        left: 65%; /* Adjust horizontal position for smaller screens */
+        left: 65%;
       }
       #noBtn {
-        left: 35%; /* Adjust horizontal position for smaller screens */
+        left: 35%;
       }
       #popup {
-        font-size: 20px;
-        padding: 20px 30px;
+        font-size: 24px; /* Increased for tablets */
+        padding: 25px 35px;
       }
     }
 
     @media (max-width: 480px) { /* For mobile phones */
       h1 {
-        font-size: 24px;
-        margin-top: 30px;
+        font-size: 32px; /* Increased for mobile phones */
+        margin-top: 50px;
       }
       .button {
-        font-size: 14px;
-        padding: 8px 15px;
-        margin: 10px; /* Further reduce margin */
+        font-size: 18px; /* Increased for mobile phones */
+        padding: 12px 25px;
+        margin: 15px;
       }
       #yesBtn {
-        left: 55%; /* Further adjust horizontal position */
+        left: 55%;
       }
       #noBtn {
-        left: 45%; /* Further adjust horizontal position */
+        left: 45%;
       }
-      /* If buttons get too close, consider stacking them vertically */
       #yesBtn, #noBtn {
-        top: 60%; /* Push buttons down a bit to separate them from the title */
+        top: 60%;
       }
       #popup {
-        font-size: 18px;
-        padding: 15px 25px;
+        font-size: 20px; /* Increased for mobile phones */
+        padding: 20px 30px;
       }
     }
-    /* --- END EDITED PART --- */
 
     #emojiRain {
       position: absolute;
@@ -115,7 +112,7 @@
 
     .emoji {
       position: absolute;
-      font-size: 30px;
+      font-size: 40px; /* Increased emoji size */
       animation: fall 3s linear forwards;
     }
 
@@ -136,7 +133,7 @@
       border-radius: 15px;
       box-shadow: 0 0 15px rgba(0,0,0,0.3);
       padding: 30px 40px;
-      font-size: 24px;
+      font-size: 28px; /* Increased popup font size */
       color: #333;
       display: none;
       z-index: 1000;
@@ -166,7 +163,6 @@
     const emojiRain = document.getElementById('emojiRain');
     const popup = document.getElementById('popup');
 
-    // Change 'mouseover' to 'click' for better mobile compatibility (as discussed previously)
     noBtn.addEventListener('click', () => {
       const maxX = window.innerWidth - noBtn.offsetWidth;
       const maxY = window.innerHeight - noBtn.offsetHeight;
