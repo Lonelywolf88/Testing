@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Are you gay?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       background: linear-gradient(to right, #ff9a9e, #fad0c4);
@@ -13,23 +14,23 @@
       height: 100vh;
       position: relative;
       text-align: center;
-      font-size: 18px; /* Base font size increased for overall larger text */
+      font-size: 24px; /* Base font size increased significantly */
     }
 
     h1 {
-      font-size: 48px; /* Increased from 36px */
+      font-size: 100px; /* As per your request */
       color: #333;
-      margin-top: 100px; /* Adjusted margin-top */
-      text-shadow: 2px 2px #fff;
+      margin-top: 150px; /* Increased margin-top */
+      text-shadow: 4px 4px #fff; /* Slightly larger text shadow */
     }
 
     .button {
-      font-size: 24px; /* Increased from 20px */
-      padding: 20px 40px; /* Increased padding */
-      margin: 30px; /* Increased margin */
+      font-size: 36px; /* Significantly increased button font size */
+      padding: 30px 60px; /* Increased button padding */
+      margin: 40px; /* Increased button margin */
       border: none;
-      border-radius: 10px;
-      position: absolute; /* Keep absolute for the random movement */
+      border-radius: 15px; /* Slightly larger border-radius */
+      position: absolute;
       transition: all 0.2s ease;
       cursor: pointer;
       display: flex;
@@ -53,16 +54,16 @@
       color: white;
     }
 
-    /* Media queries for responsiveness - values adjusted to scale up */
+    /* Media queries for responsiveness - values scaled up for new base sizes */
     @media (max-width: 768px) { /* For tablets and smaller */
       h1 {
-        font-size: 38px; /* Increased for tablets */
-        margin-top: 70px;
+        font-size: 70px; /* Adjusted for tablets */
+        margin-top: 100px;
       }
       .button {
-        font-size: 20px; /* Increased for tablets */
-        padding: 15px 30px;
-        margin: 20px;
+        font-size: 28px; /* Adjusted for tablets */
+        padding: 20px 40px;
+        margin: 25px;
       }
       #yesBtn {
         left: 65%;
@@ -71,19 +72,22 @@
         left: 35%;
       }
       #popup {
-        font-size: 24px; /* Increased for tablets */
-        padding: 25px 35px;
+        font-size: 32px; /* Adjusted for tablets */
+        padding: 30px 45px;
+      }
+      .emoji {
+        font-size: 50px; /* Adjusted for tablets */
       }
     }
 
     @media (max-width: 480px) { /* For mobile phones */
       h1 {
-        font-size: 32px; /* Increased for mobile phones */
-        margin-top: 50px;
+        font-size: 50px; /* Adjusted for mobile phones */
+        margin-top: 80px;
       }
       .button {
-        font-size: 18px; /* Increased for mobile phones */
-        padding: 12px 25px;
+        font-size: 22px; /* Adjusted for mobile phones */
+        padding: 15px 30px;
         margin: 15px;
       }
       #yesBtn {
@@ -96,8 +100,11 @@
         top: 60%;
       }
       #popup {
-        font-size: 20px; /* Increased for mobile phones */
-        padding: 20px 30px;
+        font-size: 26px; /* Adjusted for mobile phones */
+        padding: 20px 35px;
+      }
+      .emoji {
+        font-size: 40px; /* Adjusted for mobile phones */
       }
     }
 
@@ -112,7 +119,7 @@
 
     .emoji {
       position: absolute;
-      font-size: 40px; /* Increased emoji size */
+      font-size: 60px; /* Significantly increased emoji size */
       animation: fall 3s linear forwards;
     }
 
@@ -131,9 +138,9 @@
       transform: translate(-50%, -50%);
       background: white;
       border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-      padding: 30px 40px;
-      font-size: 28px; /* Increased popup font size */
+      box-shadow: 0 0 20px rgba(0,0,0,0.4); /* Slightly larger shadow */
+      padding: 40px 50px; /* Increased popup padding */
+      font-size: 36px; /* Significantly increased popup font size */
       color: #333;
       display: none;
       z-index: 1000;
