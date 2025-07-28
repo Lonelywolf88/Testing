@@ -101,12 +101,12 @@
         top: 60%;
       }
       #popup {
-        font-size: 16px; /* **Increased font size for readability** */
-        padding: 10px 15px; /* **Adjusted padding for wrapping** */
-        line-height: 1.4; /* Adjusted line-height for better spacing */
-        white-space: normal; /* **NEW: Allows text to wrap** */
-        max-width: 90vw; /* Keep max-width to prevent overflow off-screen */
-        box-sizing: border-box; /* Ensures padding is included in width calculation */
+        font-size: 4px; /* **EXTREMELY TINY FONT SIZE for popup on mobile to force single line** */
+        padding: 4px 2px; /* **Reduced horizontal padding even further** */
+        line-height: 1.2;
+        white-space: nowrap; /* Forces text onto a single line */
+        max-width: 98vw; /* **Increased max-width to allow more text space, but risks being cut by browser UI** */
+        box-sizing: border-box;
       }
       .emoji {
         font-size: 40px;
