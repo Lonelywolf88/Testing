@@ -14,22 +14,22 @@
       height: 100vh;
       position: relative;
       text-align: center;
-      font-size: 24px; /* Base font size increased significantly */
+      font-size: 24px; /* Base font size */
     }
 
     h1 {
-      font-size: 100px; /* As per your request */
+      font-size: 100px; /* User specified */
       color: #333;
-      margin-top: 150px; /* Increased margin-top */
-      text-shadow: 4px 4px #fff; /* Slightly larger text shadow */
+      margin-top: 150px;
+      text-shadow: 4px 4px #fff;
     }
 
     .button {
-      font-size: 36px; /* Significantly increased button font size */
-      padding: 30px 60px; /* Increased button padding */
-      margin: 40px; /* Increased button margin */
+      font-size: 36px;
+      padding: 30px 60px;
+      margin: 40px;
       border: none;
-      border-radius: 15px; /* Slightly larger border-radius */
+      border-radius: 15px;
       position: absolute;
       transition: all 0.2s ease;
       cursor: pointer;
@@ -55,14 +55,14 @@
       color: white;
     }
 
-    /* Media queries for responsiveness - values scaled up for new base sizes */
+    /* Media queries for responsiveness */
     @media (max-width: 768px) { /* For tablets and smaller */
       h1 {
-        font-size: 70px; /* Adjusted for tablets */
+        font-size: 70px;
         margin-top: 100px;
       }
       .button {
-        font-size: 28px; /* Adjusted for tablets */
+        font-size: 28px;
         padding: 20px 40px;
         margin: 25px;
       }
@@ -73,40 +73,40 @@
         left: 35%;
       }
       #popup {
-        font-size: 32px; /* Adjusted for tablets */
+        font-size: 32px;
         padding: 30px 45px;
       }
       .emoji {
-        font-size: 50px; /* Adjusted for tablets */
+        font-size: 50px;
       }
     }
 
-    @media (max-width: 480px) { /* For mobile phones */
+    @media (max-width: 480px) { /* For mobile phones (e.g., iPhone) */
       h1 {
-        font-size: 50px; /* Adjusted for mobile phones */
+        font-size: 50px;
         margin-top: 80px;
       }
       .button {
-        font-size: 16px; /* Significantly reduced for smaller phones */
-        padding: 10px 20px; /* Significantly reduced for smaller phones */
-        margin: 10px; /* Adjusted margin */
+        font-size: 14px; /* Further decreased font size for buttons */
+        padding: 8px 15px; /* Further decreased padding for buttons */
+        margin: 8px; /* Adjusted margin */
       }
       #yesBtn {
-        left: 70%;
+        left: 68%;
       }
       #noBtn {
-        left: 30%;
+        left: 32%;
       }
       #yesBtn, #noBtn {
         top: 60%;
       }
       #popup {
-        font-size: 18px; /* Significantly reduced for mobile popup text */
-        padding: 10px 15px; /* Reduced padding for mobile popup text */
-        line-height: 1.2; /* Helps fit multi-line text */
+        font-size: 18px;
+        padding: 10px 15px;
+        line-height: 1.2;
       }
       .emoji {
-        font-size: 40px; /* Adjusted for mobile phones */
+        font-size: 40px;
       }
     }
 
@@ -121,7 +121,7 @@
 
     .emoji {
       position: absolute;
-      font-size: 60px; /* Significantly increased emoji size */
+      font-size: 60px;
       animation: fall 3s linear forwards;
     }
 
@@ -140,13 +140,14 @@
       transform: translate(-50%, -50%);
       background: white;
       border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4); /* Slightly larger shadow */
-      padding: 40px 50px; /* Increased popup padding */
-      font-size: 36px; /* Significantly increased popup font size */
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      padding: 40px 50px;
+      font-size: 36px;
       color: #333;
       display: none;
       z-index: 1000;
       user-select: none;
+      writing-mode: horizontal-tb; /* **NEW: Ensures text flows horizontally** */
     }
   </style>
 </head>
