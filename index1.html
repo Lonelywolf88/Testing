@@ -36,6 +36,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      white-space: nowrap; /* Prevents text/emoji wrapping inside button */
     }
 
     #yesBtn {
@@ -86,11 +87,10 @@
         margin-top: 80px;
       }
       .button {
-        font-size: 16px; /* **SIGNIFICANTLY REDUCED for smaller phones** */
-        padding: 10px 20px; /* **SIGNIFICANTLY REDUCED for smaller phones** */
+        font-size: 16px; /* Significantly reduced for smaller phones */
+        padding: 10px 20px; /* Significantly reduced for smaller phones */
         margin: 10px; /* Adjusted margin */
       }
-      /* Adjusted left percentages for max separation with smaller buttons */
       #yesBtn {
         left: 70%;
       }
@@ -101,8 +101,9 @@
         top: 60%;
       }
       #popup {
-        font-size: 26px; /* Adjusted for mobile phones */
-        padding: 20px 35px;
+        font-size: 18px; /* Significantly reduced for mobile popup text */
+        padding: 10px 15px; /* Reduced padding for mobile popup text */
+        line-height: 1.2; /* Helps fit multi-line text */
       }
       .emoji {
         font-size: 40px; /* Adjusted for mobile phones */
@@ -146,15 +147,14 @@
       display: none;
       z-index: 1000;
       user-select: none;
-      white-space: nowrap;
     }
   </style>
 </head>
 <body>
 
-  <h1>兄弟，你是不是gay？😏</h1>
+  <h1>Are you gay?</h1>
   <button id="yesBtn" class="button">是 👉👈</button>
-  <button id="noBtn" class="button">不是 💅</button>
+  <button id="noBtn" class="button">不是 🚀</button>
   <div id="emojiRain"></div>
 
   <audio id="sound" preload="auto" >
@@ -172,10 +172,23 @@
     const popup = document.getElementById('popup');
 
     noBtn.addEventListener('click', () => {
-      const maxX = window.innerWidth - noBtn.offsetWidth;
-      const maxY = window.innerHeight - noBtn.offsetHeight;
-      const randX = Math.floor(Math.random() * maxX);
-      const randY = Math.floor(Math.random() * maxY);
+      // Define a padding (margin) from the edges in pixels
+      const padding = 50; // Keep button at least 50px from any edge
+
+      // Calculate the restricted movement range
+      const minX = padding;
+      const maxX = window.innerWidth - noBtn.offsetWidth - padding;
+      const minY = padding;
+      const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+
+      // Ensure that maxX and maxY are not less than minX and minY
+      // This prevents issues if the screen is smaller than (button + 2*padding)
+      const actualMaxX = Math.max(minX, maxX);
+      const actualMaxY = Math.max(minY, maxY);
+
+      const randX = minX + Math.floor(Math.random() * (actualMaxX - minX));
+      const randY = minY + Math.floor(Math.random() * (actualMaxY - minY));
+
       noBtn.style.left = `${randX}px`;
       noBtn.style.top = `${randY}px`;
     });
