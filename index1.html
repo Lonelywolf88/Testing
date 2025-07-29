@@ -1,250 +1,250 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <meta charset="UTF-8" />
-  <title>Are you gay?</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      background: linear-gradient(to right, #ff9a9e, #fad0c4);
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      height: 100vh;
-      position: relative;
-      text-align: center;
-      font-size: 24px; /* Base font size */
-    }
+  <meta charset="UTF-8" />
+  <title>Are you gay?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: linear-gradient(to right, #ff9a9e, #fad0c4); /* BODY BACKGROUND COLOR HERE */
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100vh;
+      position: relative;
+      text-align: center;
+      font-size: 24px; /* Base font size */
+    }
 
-    h1 {
-      font-size: 100px; /* User specified */
-      color: #333;
-      margin-top: 150px;
-      text-shadow: 4px 4px #fff;
-    }
+    h1 {
+      font-size: 100px; /* User specified */
+      color: #333; /* H1 TEXT COLOR HERE */
+      margin-top: 150px;
+      text-shadow: 4px 4px #fff; /* H1 TEXT SHADOW COLOR HERE */
+    }
 
-    .button {
-      font-size: 40px; /* Increased font size */
-      padding: 35px 70px; /* Increased padding */
-      margin: 40px;
-      border: none;
-      border-radius: 15px;
-      position: absolute;
-      transition: all 0.2s ease;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      white-space: nowrap; /* Prevents text/emoji wrapping inside button */
-    }
+    .button {
+      font-size: 40px; /* Increased font size */
+      padding: 35px 70px; /* Increased padding */
+      margin: 40px;
+      border: none;
+      border-radius: 15px;
+      position: absolute;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      white-space: nowrap; /* Prevents text/emoji wrapping inside button */
+    }
 
-    #yesBtn {
-      left: 60%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #28a745;
-      color: white;
-    }
+    #yesBtn {
+      left: 60%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #28a745; /* YES BUTTON BACKGROUND COLOR HERE (GREEN) */
+      color: white; /* YES BUTTON TEXT COLOR HERE */
+    }
 
-    #noBtn {
-      left: 40%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #dc3545;
-      color: white;
-    }
+    #noBtn {
+      left: 40%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #dc3545; /* NO BUTTON BACKGROUND COLOR HERE (RED) */
+      color: white; /* NO BUTTON TEXT COLOR HERE */
+    }
 
-    /* Media queries for responsiveness */
-    @media (max-width: 768px) { /* For tablets and smaller */
-      h1 {
-        font-size: 70px;
-        margin-top: 100px;
-      }
-      .button {
-        font-size: 32px; /* Increased font size for tablets */
-        padding: 25px 50px; /* Increased padding for tablets */
-        margin: 25px;
-      }
-      #yesBtn {
-        left: 65%;
-      }
-      #noBtn {
-        left: 35%;
-      }
-      #popup {
-        font-size: 32px;
-        padding: 30px 45px;
-      }
-      .emoji {
-        font-size: 50px;
-      }
-    }
+    /* Media queries for responsiveness */
+    @media (max-width: 768px) { /* For tablets and smaller */
+      h1 {
+        font-size: 70px;
+        margin-top: 100px;
+      }
+      .button {
+        font-size: 32px; /* Increased font size for tablets */
+        padding: 25px 50px; /* Increased padding for tablets */
+        margin: 25px;
+      }
+      #yesBtn {
+        left: 65%;
+      }
+      #noBtn {
+        left: 35%;
+      }
+      #popup {
+        font-size: 32px;
+        padding: 30px 45px;
+      }
+      .emoji {
+        font-size: 50px;
+      }
+    }
 
-    @media (max-width: 480px) { /* For mobile phones (e.g., iPhone) */
-      h1 {
-        font-size: 50px;
-        margin-top: 80px;
-      }
-      .button {
-        font-size: 18px; /* Increased font size for mobile buttons */
-        padding: 10px 20px; /* Increased padding for mobile buttons */
-        margin: 8px; /* Adjusted margin */
-      }
-      #yesBtn {
-        left: 68%;
-      }
-      #noBtn {
-        left: 32%;
-      }
-      #yesBtn, #noBtn {
-        top: 60%;
-      }
-      #popup {
-        font-size: 4px; /* Extremely tiny font size for popup on mobile to force single line */
-        padding: 4px 2px; /* Reduced horizontal padding even further */
-        line-height: 1.2;
-        white-space: nowrap; /* Forces text onto a single line */
-        max-width: 98vw; /* Increased max-width to allow more text space, but risks being cut by browser UI */
-        box-sizing: border-box;
-      }
-      .emoji {
-        font-size: 40px;
-      }
-    }
+    @media (max-width: 480px) { /* For mobile phones (e.g., iPhone) */
+      h1 {
+        font-size: 50px;
+        margin-top: 80px;
+      }
+      .button {
+        font-size: 18px; /* Increased font size for mobile buttons */
+        padding: 10px 20px; /* Increased padding for mobile buttons */
+        margin: 8px; /* Adjusted margin */
+      }
+      #yesBtn {
+        left: 68%;
+      }
+      #noBtn {
+        left: 32%;
+      }
+      #yesBtn, #noBtn {
+        top: 60%;
+      }
+      #popup {
+        font-size: 4px; /* EXTREMELY TINY FONT SIZE for popup on mobile to force single line */
+        padding: 4px 2px; /* Reduced horizontal padding even further */
+        line-height: 1.2;
+        white-space: nowrap; /* Forces text onto a single line */
+        max-width: 98vw; /* Increased max-width to allow more text space, but risks being cut by browser UI */
+        box-sizing: border-box;
+      }
+      .emoji {
+        font-size: 40px;
+      }
+    }
 
-    #emojiRain {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      pointer-events: none;
-      z-index: 999;
-    }
+    #emojiRain {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      pointer-events: none;
+      z-index: 999;
+    }
 
-    .emoji {
-      position: absolute;
-      font-size: 60px;
-      animation: fall 3s linear forwards;
-    }
+    .emoji {
+      position: absolute;
+      font-size: 60px;
+      animation: fall 3s linear forwards;
+    }
 
-    @keyframes fall {
-      to {
-        transform: translateY(100vh);
-        opacity: 0;
-      }
-    }
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
 
-    /* Custom popup styling */
-    #popup {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
-      padding: 40px 50px;
-      font-size: 20px;
-      color: #333;
-      display: none;
-      z-index: 1000;
-      user-select: none;
-      writing-mode: horizontal-tb; /* Ensures text flows horizontally */
-    }
-  </style>
+    /* Custom popup styling */
+    #popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white; /* POPUP BACKGROUND COLOR HERE */
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      padding: 40px 50px;
+      font-size: 20px;
+      color: #333; /* POPUP TEXT COLOR HERE */
+      display: none;
+      z-index: 1000;
+      user-select: none;
+      writing-mode: horizontal-tb; /* Ensures text flows horizontally */
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Are you gay?</h1>
-  <button id="yesBtn" class="button">是 👉👈</button>
-  <button id="noBtn" class="button">不是 🚀</button>
-  <div id="emojiRain"></div>
+  <h1>Are you gay?</h1>
+  <button id="yesBtn" class="button">是 👉👈</button>
+  <button id="noBtn" class="button">不是 🚀</button>
+  <div id="emojiRain"></div>
 
-  <audio id="sound" preload="auto" >
-    <source src="https://cdn.jsdelivr.net/gh/JustDo1989/public-audio/laugh.mp3" type="audio/mpeg" />
-    <source src="https://www.soundjay.com/human/sounds/human-laugh-01.mp3" type="audio/mpeg" />
-  </audio>
+  <audio id="sound" preload="auto" >
+    <source src="https://cdn.jsdelivr.net/gh/JustDo1989/public-audio/laugh.mp3" type="audio/mpeg" />
+    <source src="https://www.soundjay.com/human/sounds/human-laugh-01.mp3" type="audio/mpeg" />
+  </audio>
 
-  <div id="popup">我早就覺得你怪怪的，果然沒錯😏</div>
+  <div id="popup">我早就覺得你怪怪的，果然沒錯😏</div>
 
-  <script>
-    const noBtn = document.getElementById('noBtn');
-    const yesBtn = document.getElementById('yesBtn');
-    const sound = document.getElementById('sound');
-    const emojiRain = document.getElementById('emojiRain');
-    const popup = document.getElementById('popup');
+  <script>
+    const noBtn = document.getElementById('noBtn');
+    const yesBtn = document.getElementById('yesBtn');
+    const sound = document.getElementById('sound');
+    const emojiRain = document.getElementById('emojiRain');
+    const popup = document.getElementById('popup');
 
-    noBtn.addEventListener('click', () => {
-      // Define a padding (margin) from the edges in pixels
-      const padding = 50; // Keep button at least 50px from any edge
+    noBtn.addEventListener('click', () => {
+      // Define a padding (margin) from the edges in pixels
+      const padding = 50; // Keep button at least 50px from any edge
 
-      // Calculate the restricted movement range
-      const minX = padding;
-      const maxX = window.innerWidth - noBtn.offsetWidth - padding;
-      const minY = padding;
-      const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+      // Calculate the restricted movement range
+      const minX = padding;
+      const maxX = window.innerWidth - noBtn.offsetWidth - padding;
+      const minY = padding;
+      const maxY = window.innerHeight - noBtn.offsetHeight - padding;
 
-      // Ensure that maxX and maxY are not less than minX and minY
-      // This prevents issues if the screen is smaller than (button + 2*padding)
-      const actualMaxX = Math.max(minX, maxX);
-      const actualMaxY = Math.max(minY, maxY);
+      // Ensure that maxX and maxY are not less than minX and minY
+      // This prevents issues if the screen is smaller than (button + 2*padding)
+      const actualMaxX = Math.max(minX, maxX);
+      const actualMaxY = Math.max(minY, maxY);
 
-      const randX = minX + Math.floor(Math.random() * (actualMaxX - minX));
-      const randY = minY + Math.floor(Math.random() * (actualMaxY - minY));
+      const randX = minX + Math.floor(Math.random() * (actualMaxX - minX));
+      const randY = minY + Math.floor(Math.random() * (actualMaxY - minY));
 
-      noBtn.style.left = `${randX}px`;
-      noBtn.style.top = `${randY}px`;
-    });
+      noBtn.style.left = `${randX}px`;
+      noBtn.style.top = `${randY}px`;
+    });
 
-    // Show popup (non-blocking)
-    function showPopup() {
-      popup.style.display = 'block';
-    }
+    // Show popup (non-blocking)
+    function showPopup() {
+      popup.style.display = 'block';
+    }
 
-    // Hide popup
-    function hidePopup() {
-      popup.style.display = 'none';
-    }
+    // Hide popup
+    function hidePopup() {
+      popup.style.display = 'none';
+    }
 
-    // Emoji rain function
-    function startEmojiRain() {
-      for (let i = 0; i < 30; i++) {
-        const emoji = document.createElement('div');
-        emoji.classList.add('emoji');
-        emoji.textContent = "🌈";
-        emoji.style.left = Math.random() * window.innerWidth + 'px';
-        emoji.style.top = '-50px';
-        emoji.style.animationDuration = (Math.random() * 2 + 2) + 's';
-        emojiRain.appendChild(emoji);
+    // Emoji rain function
+    function startEmojiRain() {
+      for (let i = 0; i < 30; i++) {
+        const emoji = document.createElement('div');
+        emoji.classList.add('emoji');
+        emoji.textContent = "🌈";
+        emoji.style.left = Math.random() * window.innerWidth + 'px';
+        emoji.style.top = '-50px';
+        emoji.style.animationDuration = (Math.random() * 2 + 2) + 's';
+        emojiRain.appendChild(emoji);
 
-        // Remove emoji after animation ends
-        setTimeout(() => {
-          emoji.remove();
-        }, 3000);
-      }
-    }
+        // Remove emoji after animation ends
+        setTimeout(() => {
+          emoji.remove();
+        }, 3000);
+      }
+    }
 
-    yesBtn.addEventListener('click', () => {
-      sound.pause();
-      sound.currentTime = 0;
+    yesBtn.addEventListener('click', () => {
+      sound.pause();
+      sound.currentTime = 0;
 
-      // Play sound
-      sound.play().catch(() => {
-        // Sound blocked or error - no biggie
-      });
+      // Play sound
+      sound.play().catch(() => {
+        // Sound blocked or error - no biggie
+      });
 
-      // Show popup and emoji rain immediately
-      showPopup();
-      startEmojiRain();
+      // Show popup and emoji rain immediately
+      showPopup();
+      startEmojiRain();
 
-      // Redirect after 2 seconds
-      setTimeout(() => {
-        hidePopup();
-        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-      }, 2000);
-    });
-  </script>
+      // Redirect after 2 seconds
+      setTimeout(() => {
+        hidePopup();
+        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+      }, 2000);
+    });
+  </script>
 
 </body>
 </html>
