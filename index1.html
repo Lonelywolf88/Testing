@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <title>Are you gay?</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <style>
     body {
-      background: linear-gradient(to right, #ff9a9e, #fad0c4); /* BODY BACKGROUND COLOR HERE */
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
       font-family: 'Comic Sans MS', cursive, sans-serif;
       margin: 0;
       padding: 0;
@@ -18,9 +19,9 @@
 
     h1 {
       font-size: 100px; /* User specified */
-      color: #333; /* H1 TEXT COLOR HERE */
+      color: #333;
       margin-top: 150px;
-      text-shadow: 4px 4px #fff; /* H1 TEXT SHADOW COLOR HERE */
+      text-shadow: 4px 4px #fff;
     }
 
     .button {
@@ -42,16 +43,16 @@
       left: 60%;
       top: 50%;
       transform: translate(-50%, -50%);
-      background-color: #28a745; /* YES BUTTON BACKGROUND COLOR HERE (GREEN) */
-      color: white; /* YES BUTTON TEXT COLOR HERE */
+      background-color: #28a745;
+      color: white;
     }
 
     #noBtn {
       left: 40%;
       top: 50%;
       transform: translate(-50%, -50%);
-      background-color: #dc3545; /* NO BUTTON BACKGROUND COLOR HERE (RED) */
-      color: white; /* NO BUTTON TEXT COLOR HERE */
+      background-color: #dc3545;
+      color: white;
     }
 
     /* Media queries for responsiveness */
@@ -100,12 +101,13 @@
         top: 60%;
       }
       #popup {
-        font-size: 3px; /* EXTREMELY TINY FONT SIZE for popup on mobile to force single line */
+        font-size: 2px; /* EXTREMELY TINY FONT SIZE for popup on mobile to force single line */
         padding: 4px 2px; /* Reduced horizontal padding even further */
         line-height: 1.2;
         white-space: nowrap; /* Forces text onto a single line */
         max-width: 98vw; /* Increased max-width to allow more text space, but risks being cut by browser UI */
         box-sizing: border-box;
+        text-align: center; /* <<< ADDED THIS LINE FOR TEXT CENTERING */
       }
       .emoji {
         font-size: 40px;
@@ -140,16 +142,17 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: white; /* POPUP BACKGROUND COLOR HERE */
+      background: white;
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(0,0,0,0.4);
       padding: 40px 50px;
-      font-size: 20px;
-      color: #333; /* POPUP TEXT COLOR HERE */
+      font-size: 15px;
+      color: #333;
       display: none;
       z-index: 1000;
       user-select: none;
       writing-mode: horizontal-tb; /* Ensures text flows horizontally */
+      text-align: center; /* <<< ADDED THIS LINE FOR TEXT CENTERING (for larger screens) */
     }
   </style>
 </head>
